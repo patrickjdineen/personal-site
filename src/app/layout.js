@@ -9,8 +9,8 @@ const geistSans = Geist({
 });
 
 export const metadata = {
-  title: "Daily Photo 2026",
-  description: "One photo every day in 2026",
+  title: "Patrick Dineen",
+  description: "Software engineer, photographer, maker of things.",
 };
 
 export default function RootLayout({ children }) {
