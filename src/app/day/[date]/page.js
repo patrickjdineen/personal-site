@@ -7,20 +7,22 @@ export function generateStaticParams() {
   return getAllPhotos().map((p) => ({ date: p.date }));
 }
 
-export function generateMetadata({ params }) {
-  const photo = getPhotoByDate(params.date);
+export async function generateMetadata({ params }) {
+  const { date } = await params;
+  const photo = getPhotoByDate(date);
   if (!photo) return {};
   return { title: `${photo.title} — Daily Photo 2026` };
 }
 
-export default function DayPage({ params }) {
-  const photo = getPhotoByDate(params.date);
+export default async function DayPage({ params }) {
+  const { date } = await params;
+  const photo = getPhotoByDate(date);
   if (!photo) notFound();
 
-  const src = getPhotoSrc(params.date);
+  const src = getPhotoSrc(date);
   if (!src) notFound();
 
-  const { prev, next } = getAdjacentPhotos(params.date);
+  const { prev, next } = getAdjacentPhotos(date);
 
   const displayDate = new Date(photo.date + "T12:00:00").toLocaleDateString(
     "en-US",
@@ -52,13 +54,14 @@ export default function DayPage({ params }) {
         )}
       </div>
 
-      <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl bg-neutral-800">
+      <div className="flex justify-center">
         <Image
           src={src}
           alt={photo.title}
-          fill
+          width={1200}
+          height={1200}
           sizes="(max-width: 896px) 100vw, 896px"
-          className="object-cover"
+          className="max-h-[80vh] w-auto rounded-xl object-contain"
           priority
         />
       </div>
