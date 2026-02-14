@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function PhotoCard({ photo, src }) {
+export default function PhotoCard({ photo, src, count }) {
   const day = new Date(photo.date + "T12:00:00").getDate();
 
   return (
@@ -20,6 +20,11 @@ export default function PhotoCard({ photo, src }) {
       <span className="absolute bottom-1 right-2 text-xs font-medium text-white/80 drop-shadow">
         {day}
       </span>
+      {count > 1 && (
+        <span className="absolute top-1.5 right-1.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-white/90 px-1 text-[10px] font-bold text-black">
+          {count}
+        </span>
+      )}
     </Link>
   );
 }

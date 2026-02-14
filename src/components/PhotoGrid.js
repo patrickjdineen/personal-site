@@ -9,7 +9,7 @@ function daysInMonth(year, month) {
   return new Date(year, month + 1, 0).getDate();
 }
 
-export default function PhotoGrid({ photos, photoSrcs }) {
+export default function PhotoGrid({ photos, photoSrcs, photoCounts }) {
   const byMonth = {};
   for (const photo of photos) {
     const month = parseInt(photo.date.slice(5, 7), 10) - 1;
@@ -48,6 +48,7 @@ export default function PhotoGrid({ photos, photoSrcs }) {
                       key={day}
                       photo={photo}
                       src={photoSrcs[photo.date]}
+                      count={photoCounts?.[photo.date] || 1}
                     />
                   );
                 }

@@ -1,167 +1,212 @@
 [
   {
     "date": "2026-01-01",
-    "title": "New Year's Dawn",
-    "caption": "First light of 2026"
+    "title": "Magnolia House",
+    "caption": "",
+    "images": ["DSCF8251.jpeg"]
   },
   {
     "date": "2026-01-02",
-    "title": "Winter Stillness",
-    "caption": "Quiet morning after the celebrations"
+    "title": "Too Much Light Makes the Baby Go Blind",
+    "caption": "",
+    "images": ["DSCF8322.jpeg", "DSCF8369.jpeg"]
   },
   {
     "date": "2026-01-03",
     "title": "January 3",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF8412.jpeg", "DSCF8416.jpeg"]
+  },
+  {
+    "date": "2026-01-04",
+    "title": "January 4",
+    "caption": "",
+    "images": []
+  },
+  {
+    "date": "2026-01-05",
+    "title": "January 5",
+    "caption": "",
+    "images": ["DSCF8435.jpeg"]
   },
   {
     "date": "2026-01-06",
     "title": "January 6",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF8456.jpeg"]
   },
   {
     "date": "2026-01-07",
     "title": "January 7",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF8477.jpeg"]
   },
   {
     "date": "2026-01-08",
     "title": "January 8",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF8488.jpeg"]
   },
   {
     "date": "2026-01-09",
     "title": "January 9",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF8545.jpeg", "DSCF8556.jpeg", "DSCF8557.jpeg"]
   },
   {
     "date": "2026-01-10",
     "title": "January 10",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF8594.jpeg", "DSCF8603.jpeg"]
   },
   {
     "date": "2026-01-11",
     "title": "January 11",
-    "caption": ""
+    "caption": "",
+    "images": []
   },
   {
     "date": "2026-01-12",
     "title": "January 12",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF8689.jpeg"]
   },
   {
     "date": "2026-01-13",
     "title": "January 13",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF8723.jpeg"]
   },
   {
     "date": "2026-01-14",
     "title": "January 14",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF8730.jpeg"]
   },
   {
     "date": "2026-01-15",
     "title": "January 15",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF8763.jpeg"]
   },
   {
     "date": "2026-01-16",
     "title": "January 16",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF8799.jpeg"]
   },
   {
     "date": "2026-01-18",
     "title": "January 18",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF8880.jpeg"]
   },
   {
     "date": "2026-01-20",
     "title": "January 20",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF8904.jpeg"]
   },
   {
     "date": "2026-01-21",
     "title": "January 21",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF8933.jpeg"]
   },
   {
     "date": "2026-01-23",
     "title": "January 23",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF8979.jpeg"]
   },
   {
     "date": "2026-01-24",
     "title": "January 24",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF8998.jpeg"]
   },
   {
     "date": "2026-01-25",
     "title": "January 25",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF9014.jpeg"]
   },
   {
     "date": "2026-01-27",
     "title": "January 27",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF9063.jpeg"]
   },
   {
     "date": "2026-01-28",
     "title": "January 28",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF9152.jpeg"]
   },
   {
     "date": "2026-01-29",
     "title": "January 29",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF9210.jpeg"]
   },
   {
     "date": "2026-01-30",
     "title": "January 30",
-    "caption": ""
+    "caption": "",
+    "images": ["IMG_5343.jpeg"]
   },
   {
     "date": "2026-01-31",
     "title": "January 31",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF9245.jpeg", "DSCF9319.jpeg"]
   },
   {
     "date": "2026-02-01",
     "title": "February 1",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF9359.jpeg"]
   },
   {
     "date": "2026-02-02",
     "title": "February 2",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF9367.jpeg"]
   },
   {
     "date": "2026-02-03",
     "title": "February 3",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF9389.jpeg"]
   },
   {
     "date": "2026-02-04",
     "title": "February 4",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF9402.jpeg"]
   },
   {
     "date": "2026-02-05",
     "title": "February 5",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF9418.jpeg"]
   },
   {
     "date": "2026-02-06",
     "title": "February 6",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF9440.jpeg"]
   },
   {
     "date": "2026-02-07",
     "title": "February 7",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF9509.jpeg"]
   },
   {
     "date": "2026-02-09",
     "title": "February 9",
-    "caption": ""
+    "caption": "",
+    "images": ["DSCF0062.jpeg", "DSCF9579.jpeg"]
   }
 ]

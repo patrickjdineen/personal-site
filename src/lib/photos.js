@@ -24,12 +24,21 @@ export function getAdjacentPhotos(date) {
 }
 
 export function getPhotoSrc(date) {
+  const photo = getPhotoByDate(date);
+  const srcs = getPhotoSrcs(photo || { date });
+  return srcs[0] || null;
+}
+
+export function getPhotoSrcs(photo) {
+  if (photo.images && photo.images.length > 0) {
+    return photo.images.map((img) => `/photos/${img}`);
+  }
   const exts = ["jpg", "jpeg", "png", "webp"];
   for (const ext of exts) {
-    const filePath = path.join(process.cwd(), "public", "photos", `${date}.${ext}`);
+    const filePath = path.join(process.cwd(), "public", "photos", `${photo.date}.${ext}`);
     if (fs.existsSync(filePath)) {
-      return `/photos/${date}.${ext}`;
+      return [`/photos/${photo.date}.${ext}`];
     }
   }
-  return null;
+  return [];
 }

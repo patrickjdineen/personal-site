@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { getAllPhotos, getPhotoByDate, getAdjacentPhotos, getPhotoSrc } from "@/lib/photos";
+import { getAllPhotos, getPhotoByDate, getAdjacentPhotos, getPhotoSrcs } from "@/lib/photos";
 
 export function generateStaticParams() {
   return getAllPhotos().map((p) => ({ date: p.date }));
@@ -19,8 +19,8 @@ export default async function DayPage({ params }) {
   const photo = getPhotoByDate(date);
   if (!photo) notFound();
 
-  const src = getPhotoSrc(date);
-  if (!src) notFound();
+  const srcs = getPhotoSrcs(photo);
+  if (srcs.length === 0) notFound();
 
   const { prev, next } = getAdjacentPhotos(date);
 
@@ -54,24 +54,28 @@ export default async function DayPage({ params }) {
         )}
       </div>
 
-      <div className="flex justify-center">
-        <Image
-          src={src}
-          alt={photo.title}
-          width={1200}
-          height={1200}
-          sizes="(max-width: 896px) 100vw, 896px"
-          className="max-h-[80vh] w-auto rounded-xl object-contain"
-          priority
-        />
-      </div>
-
-      <div className="mt-6 space-y-1">
+      <div className="mb-6 space-y-1">
         <h1 className="text-2xl font-bold">{photo.title}</h1>
         <p className="text-sm text-neutral-400">{displayDate}</p>
         {photo.caption && (
           <p className="mt-3 text-neutral-300">{photo.caption}</p>
         )}
+      </div>
+
+      <div className="space-y-4">
+        {srcs.map((src, i) => (
+          <div key={src} className="flex justify-center">
+            <Image
+              src={src}
+              alt={srcs.length > 1 ? `${photo.title} (${i + 1}/${srcs.length})` : photo.title}
+              width={1200}
+              height={1200}
+              sizes="(max-width: 896px) 100vw, 896px"
+              className="max-h-[80vh] w-auto rounded-xl object-contain"
+              priority={i === 0}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
