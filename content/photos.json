@@ -230,44 +230,44 @@
     {
     "date": "2026-02-08",
     "title": "February 8",
-    "caption": "Checkers",
-    "images": ["DSCF9509.jpeg"]
+    "caption": "Sokol Shades",
+    "images": ["DSCF0062.jpeg"]
   },
   {
     "date": "2026-02-09",
     "title": "February 9",
-    "caption": "Sokol Shades",
-    "images": [ "DSCF0062.jpeg"]
-  },
-  {
-    "date": "2026-02-10",
-    "title": "February 10",
     "caption": "Shadow Bike",
     "images": [ "DSCF9579.jpeg"]
   },
   {
-    "date": "2026-02-11",
-    "title": "February 11",
+    "date": "2026-02-10",
+    "title": "February 10",
     "caption": "Glass Panels",
     "images": [ "DSCF9588.jpeg"]
   },
   {
-    "date": "2026-02-12",
-    "title": "February 12",
+    "date": "2026-02-11",
+    "title": "February 11",
     "caption": "Breakfast",
     "images": [ "DSCF9600.jpeg"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "February 12",
+    "caption": "Look Up",
+    "images": [ "DSCF9626.jpeg"]
   },    
   {
     "date": "2026-02-13",
     "title": "February 13",
-    "caption": "Look Up",
-    "images": [ ""]
+    "caption": "At the Bar",
+    "images": [ "IMG_5343.jpeg"]
   },
   {
     "date": "2026-02-14",
     "title": "February 14",
-    "caption": "",
-    "images": [ ""]
+    "caption": "Librarian",
+    "images": [ "DSCF9706.jpeg"]
   }
 
 ]
