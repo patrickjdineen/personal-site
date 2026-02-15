@@ -22,7 +22,7 @@ export default function Home() {
         </p>
       </section>
 
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 sm:grid-cols-2">
         <Link
           href="/photos"
           className="group block rounded-xl border border-white/10 p-6 transition-colors hover:border-white/25"
@@ -61,24 +61,6 @@ export default function Home() {
           </h2>
           <p className="mt-1 text-sm text-neutral-400">
             Thoughts and writing
-          </p>
-        </Link>
-
-        <Link
-          href="/projects"
-          className="group block rounded-xl border border-white/10 p-6 transition-colors hover:border-white/25"
-        >
-          <div className="mb-4 rounded-lg bg-white/5 p-4">
-            <p className="text-sm font-medium">Things I&apos;ve built</p>
-            <p className="mt-1 text-xs text-neutral-500">
-              Web apps, tools, and more
-            </p>
-          </div>
-          <h2 className="text-lg font-semibold group-hover:text-neutral-300 transition-colors">
-            Projects
-          </h2>
-          <p className="mt-1 text-sm text-neutral-400">
-            Side projects and experiments
           </p>
         </Link>
       </div>
