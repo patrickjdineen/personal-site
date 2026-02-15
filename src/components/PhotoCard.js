@@ -17,7 +17,7 @@ export default function PhotoCard({ photo, src, count }) {
         className="object-cover transition-transform duration-300 group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
-      <span className="absolute bottom-1 right-2 text-xs font-medium text-white/80 drop-shadow">
+      <span className="absolute bottom-1 right-1.5 rounded bg-black/50 px-1.5 py-0.5 text-xs font-semibold text-white drop-shadow">
         {day}
       </span>
       {count > 1 && (
