@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getAllPhotos, getPhotoSrc } from "@/lib/photos";
+import { getAllPhotos, getPhotoSrcs } from "@/lib/photos";
 import { getAllPosts } from "@/lib/blog";
 
 export default function Home() {
   const photos = getAllPhotos();
   const latestPhoto = photos[0];
-  const latestPhotoSrc = latestPhoto ? getPhotoSrc(latestPhoto.date) : null;
+  const latestPhotoSrc = latestPhoto ? getPhotoSrcs(latestPhoto)[0] : null;
 
   const posts = getAllPosts();
   const latestPost = posts[0];
