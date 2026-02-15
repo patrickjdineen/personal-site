@@ -1,15 +1,15 @@
 [
   {
     "date": "2026-01-01",
-    "title": "Magnolia House",
-    "caption": "",
+    "title": "January 1",
+    "caption": "Magnolia House",
     "images": ["DSCF8251.jpeg"]
   },
   {
     "date": "2026-01-02",
-    "title": "Too Much Light Makes the Baby Go Blind",
-    "caption": "",
-    "images": ["", "DSCF8369.jpeg"]
+    "title": "January 2",
+    "caption": "Too Much Light Makes the Baby Go Blind",
+    "images": ["DSCF8369.jpeg"]
   },
   {
     "date": "2026-01-03",
@@ -99,7 +99,7 @@
     "date": "2026-01-17",
     "title": "January 17",
     "caption": "Is it CAKE?!?!?",
-    "images": ["DSCF8837.jpeg","DSCF8838"]
+    "images": ["DSCF8837.jpeg","DSCF8838.jpeg"]
   },
   {
     "date": "2026-01-18",
@@ -125,6 +125,12 @@
     "caption": "The Symbiotic Relationship Between Dog and Baby",
     "images": ["DSCF8933.jpeg"]
   },
+    {
+    "date": "2026-01-22",
+    "title": "January 22",
+    "caption": "Trains and Automobiles",
+    "images": ["DSCF8938.jpeg"]
+  },
   {
     "date": "2026-01-23",
     "title": "January 23",
@@ -142,6 +148,12 @@
     "title": "January 25",
     "caption": "Winter Corridor",
     "images": ["DSCF9014.jpeg"]
+  },
+    {
+    "date": "2026-01-26",
+    "title": "January 26",
+    "caption": "Take A Different Path",
+    "images": ["DSCF9028.jpeg"]
   },
   {
     "date": "2026-01-27",
@@ -215,10 +227,47 @@
     "caption": "Checkers",
     "images": ["DSCF9509.jpeg"]
   },
+    {
+    "date": "2026-02-08",
+    "title": "February 8",
+    "caption": "Checkers",
+    "images": ["DSCF9509.jpeg"]
+  },
   {
     "date": "2026-02-09",
     "title": "February 9",
-    "caption": "",
+    "caption": "Sokol Shades",
+    "images": [ "DSCF0062.jpeg"]
+  },
+  {
+    "date": "2026-02-10",
+    "title": "February 10",
+    "caption": "Shadow Bike",
     "images": [ "DSCF9579.jpeg"]
+  },
+  {
+    "date": "2026-02-11",
+    "title": "February 11",
+    "caption": "Glass Panels",
+    "images": [ "DSCF9588.jpeg"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "February 12",
+    "caption": "Breakfast",
+    "images": [ "DSCF9600.jpeg"]
+  },    
+  {
+    "date": "2026-02-13",
+    "title": "February 13",
+    "caption": "Look Up",
+    "images": [ ""]
+  },
+  {
+    "date": "2026-02-14",
+    "title": "February 14",
+    "caption": "",
+    "images": [ ""]
   }
+
 ]
