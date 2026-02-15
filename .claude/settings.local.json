@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app:*)",
+      "Bash(npx --yes create-placeholder-image)",
+      "Bash(python3:*)",
+      "Bash(npm run build:*)",
+      "Bash(timeout 10 npm run dev:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)",
+      "Bash(curl:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(gh auth:*)",
+      "Bash(gh repo create:*)",
+      "Bash(npm install:*)",
+      "Bash(vercel whoami:*)",
+      "Bash(vercel:*)",
+      "Bash(open https://personalsite-psi-three.vercel.app)",
+      "Bash(ls:*)",
+      "Bash(git push:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npx vercel ls:*)",
+      "Bash(npx vercel inspect:*)",
+      "Bash(mdls:*)",
+      "Bash(sips:*)",
+      "Bash(for f in /Users/patrickdineen/Documents/Coding/personal_site/public/photos/2026-*.jpeg)",
+      "Bash(do sips -Z 2000 \"$f\")",
+      "Bash(done)",
+      "Bash(du:*)",
+      "Bash(npx vercel:*)",
+      "Bash(code:*)",
+      "Bash(open:*)"
+    ]
+  }
+}
