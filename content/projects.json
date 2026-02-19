@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Daily Photo 2026",
+    "description": "A photo every day for the entire year. Built with Next.js and hosted on Vercel.",
+    "url": "/photos",
+    "tags": ["photography", "next.js"]
+  },
+  {
+    "title": "Personal Site",
+    "description": "This website — a hub for my photos, blog, and projects.",
+    "url": "https://github.com/patrickdineen",
+    "tags": ["next.js", "tailwind"]
+  }
+]
