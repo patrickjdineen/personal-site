@@ -66,9 +66,9 @@ export default function PhotoModal({ photo, srcs, displayDate, prev, next }) {
           )}
         </div>
 
-        <div className="space-y-4">
+        <div className={srcs.length > 1 ? "flex gap-4" : ""}>
           {srcs.map((src, i) => (
-            <div key={src} className="flex justify-center">
+            <div key={src} className={srcs.length > 1 ? "flex-1 flex justify-center" : "flex justify-center"}>
               <Image
                 src={src}
                 alt={
@@ -78,7 +78,7 @@ export default function PhotoModal({ photo, srcs, displayDate, prev, next }) {
                 }
                 width={1200}
                 height={1200}
-                sizes="(max-width: 896px) 100vw, 896px"
+                sizes={srcs.length > 1 ? `(max-width: 896px) ${Math.round(100 / srcs.length)}vw, ${Math.round(896 / srcs.length)}px` : "(max-width: 896px) 100vw, 896px"}
                 className="max-h-[80vh] w-auto rounded-xl object-contain"
                 priority={i === 0}
               />
