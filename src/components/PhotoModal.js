@@ -35,6 +35,14 @@ export default function PhotoModal({ photo, srcs, displayDate, prev, next }) {
         className="mx-auto w-full max-w-4xl px-6 py-10"
         onClick={(e) => e.stopPropagation()}
       >
+        <div className="mb-6 space-y-1 text-center">
+          <h1 className="text-2xl font-bold">{photo.title}</h1>
+          <p className="text-sm text-neutral-400">{displayDate}</p>
+          {photo.caption && (
+            <p className="mt-3 text-neutral-300">{photo.caption}</p>
+          )}
+        </div>
+
         <div className="mb-6 flex items-center justify-between">
           {prev ? (
             <button
@@ -55,14 +63,6 @@ export default function PhotoModal({ photo, srcs, displayDate, prev, next }) {
             </button>
           ) : (
             <span />
-          )}
-        </div>
-
-        <div className="mb-6 space-y-1">
-          <h1 className="text-2xl font-bold">{photo.title}</h1>
-          <p className="text-sm text-neutral-400">{displayDate}</p>
-          {photo.caption && (
-            <p className="mt-3 text-neutral-300">{photo.caption}</p>
           )}
         </div>
 
