@@ -17,7 +17,7 @@ export default function PhotosPage() {
   }
 
   return (
-    <div className="mx-auto max-w-6xl px-6 py-10">
+    <div className="mx-auto max-w-[76rem] px-6 py-10">
       <h1 className="mb-8 text-3xl font-bold tracking-tight">2026</h1>
       <PhotoGrid photos={photos} photoSrcs={photoSrcs} />
     </div>
