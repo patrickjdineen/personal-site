@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import Image from "next/image";
 import { getAllPhotos, getPhotoByDate, getAdjacentPhotos, getPhotoSrcs } from "@/lib/photos";
+import PhotoViewer from "@/components/PhotoViewer";
 
 export function generateStaticParams() {
   return getAllPhotos().map((p) => ({ date: p.date }));
@@ -34,52 +33,12 @@ export default async function DayPage({ params }) {
   );
 
   return (
-    <div className="mx-auto max-w-4xl px-6 py-10">
-      <div className="mb-6 space-y-1 text-center">
-        <h1 className="text-lg sm:text-2xl font-bold">{displayDate}</h1>
-        {photo.caption && (
-          <p className="mt-3 text-neutral-300">{photo.caption}</p>
-        )}
-      </div>
-
-      <div className="mb-6 flex items-center justify-between">
-        {prev ? (
-          <Link
-            href={`/day/${prev.date}`}
-            className="text-sm text-neutral-400 hover:text-white transition-colors"
-          >
-            &larr; {prev.date}
-          </Link>
-        ) : (
-          <span />
-        )}
-        {next ? (
-          <Link
-            href={`/day/${next.date}`}
-            className="text-sm text-neutral-400 hover:text-white transition-colors"
-          >
-            {next.date} &rarr;
-          </Link>
-        ) : (
-          <span />
-        )}
-      </div>
-
-      <div className={srcs.length > 1 ? "flex gap-4" : ""}>
-        {srcs.map((src, i) => (
-          <div key={src} className={srcs.length > 1 ? "flex-1 flex justify-center" : "flex justify-center"}>
-            <Image
-              src={src}
-              alt={srcs.length > 1 ? `${displayDate} (${i + 1}/${srcs.length})` : displayDate}
-              width={1200}
-              height={1200}
-              sizes={srcs.length > 1 ? `(max-width: 896px) ${Math.round(100 / srcs.length)}vw, ${Math.round(896 / srcs.length)}px` : "(max-width: 896px) 100vw, 896px"}
-              className="max-h-[80vh] w-auto rounded-xl object-contain"
-              priority={i === 0}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
+    <PhotoViewer
+      photo={{ caption: photo.caption, date: photo.date }}
+      srcs={srcs}
+      displayDate={displayDate}
+      prev={prev ? { date: prev.date } : null}
+      next={next ? { date: next.date } : null}
+    />
   );
 }
