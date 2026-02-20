@@ -23,7 +23,7 @@ export default function PhotoCard({ photo, srcs }) {
         ))}
       </div>
       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
-      <span className="absolute top-2 left-2 rounded-md bg-black/70 px-2 py-0.5 text-sm font-bold text-white drop-shadow-md">
+      <span className="absolute top-2 left-2 hidden sm:block rounded-md bg-black/70 px-2 py-0.5 text-sm font-bold text-white drop-shadow-md">
         {day}
       </span>
     </Link>
