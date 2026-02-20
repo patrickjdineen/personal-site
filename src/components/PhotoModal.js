@@ -49,36 +49,35 @@ export default function PhotoModal({ photo, srcs, displayDate, prev, next }) {
       onClick={dismiss}
     >
       <div
-        className="mx-auto w-full max-w-4xl px-6 py-10"
+        className="mx-auto w-full max-w-4xl px-4 sm:px-6 py-3 sm:py-6"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="mb-6 space-y-1 text-center">
-          <h1 className="text-lg sm:text-2xl font-bold">{displayDate}</h1>
-          {photo.caption && (
-            <p className="mt-3 text-neutral-300">{photo.caption}</p>
-          )}
-        </div>
-
-        <div className="mb-6 flex items-center justify-between">
+        <div className="mb-3 flex items-center justify-between gap-2">
           {prev ? (
             <button
               onClick={() => navigate(prev.date)}
-              className="text-sm text-neutral-400 hover:text-white transition-colors"
+              className="shrink-0 text-sm text-neutral-400 hover:text-white transition-colors"
             >
-              &larr; {prev.date}
+              &larr;
             </button>
           ) : (
-            <span />
+            <span className="w-4" />
           )}
+          <div className="min-w-0 text-center">
+            <h1 className="text-base sm:text-xl font-bold leading-tight">{displayDate}</h1>
+            {photo.caption && (
+              <p className="text-sm text-neutral-400 truncate">{photo.caption}</p>
+            )}
+          </div>
           {next ? (
             <button
               onClick={() => navigate(next.date)}
-              className="text-sm text-neutral-400 hover:text-white transition-colors"
+              className="shrink-0 text-sm text-neutral-400 hover:text-white transition-colors"
             >
-              {next.date} &rarr;
+              &rarr;
             </button>
           ) : (
-            <span />
+            <span className="w-4" />
           )}
         </div>
 
