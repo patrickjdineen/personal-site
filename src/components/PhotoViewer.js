@@ -48,7 +48,7 @@ export default function PhotoViewer({ photo, srcs, displayDate, prev, next, isMo
   }, [navigate, prev, next]);
 
   const content = (
-    <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 py-3 sm:py-6">
+    <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 py-3 sm:py-6" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
       <div className="mb-3 flex items-center justify-between gap-2">
         {prev ? (
           <button
@@ -78,7 +78,7 @@ export default function PhotoViewer({ photo, srcs, displayDate, prev, next, isMo
         )}
       </div>
 
-      <div className="relative" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+      <div className="relative">
         <div className={srcs.length > 1 ? "flex gap-4" : ""}>
           {srcs.map((src, i) => (
             <div key={src} className={srcs.length > 1 ? "flex-1 flex justify-center" : "flex justify-center"}>
