@@ -19,7 +19,7 @@ export default async function InterceptedDayPage({ params }) {
 
   return (
     <PhotoModal
-      photo={{ title: photo.title, caption: photo.caption, date: photo.date }}
+      photo={{ caption: photo.caption, date: photo.date }}
       srcs={srcs}
       displayDate={displayDate}
       prev={prev ? { date: prev.date } : null}

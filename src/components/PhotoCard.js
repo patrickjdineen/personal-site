@@ -14,7 +14,7 @@ export default function PhotoCard({ photo, srcs }) {
           <div key={src} className="relative flex-1 overflow-hidden">
             <Image
               src={src}
-              alt={i === 0 ? photo.title : `${photo.title} (${i + 1})`}
+              alt={i === 0 ? photo.date : `${photo.date} (${i + 1})`}
               fill
               sizes={`(max-width: 640px) ${Math.round(33 / srcs.length)}vw, (max-width: 1024px) ${Math.round(14 / srcs.length)}vw, ${Math.round(120 / srcs.length)}px`}
               className="object-cover transition-transform duration-300 group-hover:scale-105"

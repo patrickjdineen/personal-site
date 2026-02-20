@@ -53,8 +53,7 @@ export default function PhotoModal({ photo, srcs, displayDate, prev, next }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="mb-6 space-y-1 text-center">
-          <h1 className="text-2xl font-bold">{photo.title}</h1>
-          <p className="text-sm text-neutral-400">{displayDate}</p>
+          <h1 className="text-2xl font-bold">{displayDate}</h1>
           {photo.caption && (
             <p className="mt-3 text-neutral-300">{photo.caption}</p>
           )}
@@ -91,8 +90,8 @@ export default function PhotoModal({ photo, srcs, displayDate, prev, next }) {
                   src={src}
                   alt={
                     srcs.length > 1
-                      ? `${photo.title} (${i + 1}/${srcs.length})`
-                      : photo.title
+                      ? `${displayDate} (${i + 1}/${srcs.length})`
+                      : displayDate
                   }
                   width={1200}
                   height={1200}
