@@ -7,7 +7,7 @@ const MONTH_NAMES = [
 
 const DAY_HEADERS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-export default function PhotoGrid({ photos, photoSrcs }) {
+export default function PhotoGrid({ photos, photoSrcs, year }) {
   const byMonth = {};
   for (const photo of photos) {
     if (!photoSrcs[photo.date]) continue;
@@ -16,7 +16,10 @@ export default function PhotoGrid({ photos, photoSrcs }) {
     byMonth[month].push(photo);
   }
 
-  const months = Object.keys(byMonth).map(Number).sort((a, b) => b - a);
+  const currentYear = new Date().getFullYear();
+  const months = Object.keys(byMonth).map(Number).sort((a, b) =>
+    year < currentYear ? a - b : b - a
+  );
 
   return (
     <div className="space-y-12">
@@ -28,8 +31,8 @@ export default function PhotoGrid({ photos, photoSrcs }) {
           photosByDay[day] = photo;
         }
 
-        const firstDayOfWeek = new Date(2026, month, 1).getDay();
-        const daysInMonth = new Date(2026, month + 1, 0).getDate();
+        const firstDayOfWeek = new Date(year, month, 1).getDay();
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
 
         return (
           <section key={month}>

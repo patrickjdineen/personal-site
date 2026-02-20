@@ -4,7 +4,7 @@ import { getAllPhotos, getPhotoSrcs } from "@/lib/photos";
 import { getAllPosts } from "@/lib/blog";
 
 export default function Home() {
-  const photos = getAllPhotos();
+  const photos = getAllPhotos(2026);
   const latestPhoto = photos[0];
   const latestPhotoSrc = latestPhoto ? getPhotoSrcs(latestPhoto)[0] : null;
 
@@ -18,7 +18,7 @@ export default function Home() {
           Patrick Dineen
         </h1>
         <p className="mt-4 text-lg text-neutral-400">
-          Software engineer, photographer, maker of things.
+          A Man, a Plan, A Website, Panama
         </p>
       </section>
 
@@ -42,7 +42,7 @@ export default function Home() {
             Photos
           </h2>
           <p className="mt-1 text-sm text-neutral-400">
-            A photo every day in 2026
+            My yearly Project 365's
           </p>
         </Link>
 

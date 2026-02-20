@@ -1,21 +1,31 @@
 import fs from "fs";
 import path from "path";
 
-const PHOTOS_JSON = path.join(process.cwd(), "content", "photos.json");
+export const YEARS = [2026, 2024, 2020];
 
-export function getAllPhotos() {
-  const raw = fs.readFileSync(PHOTOS_JSON, "utf-8");
+function photosFile(year) {
+  return path.join(process.cwd(), "content", `photos-${year}.json`);
+}
+
+function yearFromDate(date) {
+  return parseInt(date.slice(0, 4), 10);
+}
+
+export function getAllPhotos(year) {
+  const raw = fs.readFileSync(photosFile(year), "utf-8");
   const photos = JSON.parse(raw);
   return photos.sort((a, b) => a.date.localeCompare(b.date));
 }
 
 export function getPhotoByDate(date) {
-  const photos = getAllPhotos();
+  const year = yearFromDate(date);
+  const photos = getAllPhotos(year);
   return photos.find((p) => p.date === date) || null;
 }
 
 export function getAdjacentPhotos(date) {
-  const photos = getAllPhotos();
+  const year = yearFromDate(date);
+  const photos = getAllPhotos(year);
   const idx = photos.findIndex((p) => p.date === date);
   return {
     prev: idx > 0 ? photos[idx - 1] : null,
@@ -25,7 +35,8 @@ export function getAdjacentPhotos(date) {
 
 export function getPhotoSrcs(photo) {
   if (photo.images && photo.images.length > 0) {
-    return photo.images.map((img) => `/photos/${img}`);
+    const year = yearFromDate(photo.date);
+    return photo.images.map((img) => `/photos/${year}/${img}`);
   }
   return [];
 }

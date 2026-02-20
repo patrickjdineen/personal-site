@@ -1,25 +1,24 @@
-import { getAllPhotos, getPhotoSrcs } from "@/lib/photos";
-import PhotoGrid from "@/components/PhotoGrid";
+import { getAllPhotos, getPhotoSrcs, YEARS } from "@/lib/photos";
+import PhotosPageClient from "./PhotosPageClient";
 
 export const metadata = {
   title: "Photos — Patrick Dineen",
-  description: "A photo every day in 2026",
+  description: "A photo every day",
 };
 
 export default function PhotosPage() {
-  const photos = getAllPhotos();
-  const photoSrcs = {};
-  for (const photo of photos) {
-    const srcs = getPhotoSrcs(photo);
-    if (srcs.length > 0) {
-      photoSrcs[photo.date] = srcs;
+  const yearData = {};
+  for (const year of YEARS) {
+    const photos = getAllPhotos(year);
+    const photoSrcs = {};
+    for (const photo of photos) {
+      const srcs = getPhotoSrcs(photo);
+      if (srcs.length > 0) {
+        photoSrcs[photo.date] = srcs;
+      }
     }
+    yearData[year] = { photos, photoSrcs };
   }
 
-  return (
-    <div className="mx-auto max-w-[76rem] px-6 py-10">
-      <h1 className="mb-8 text-3xl font-bold tracking-tight">2026</h1>
-      <PhotoGrid photos={photos} photoSrcs={photoSrcs} />
-    </div>
-  );
+  return <PhotosPageClient years={YEARS} yearData={yearData} />;
 }

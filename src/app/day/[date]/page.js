@@ -1,20 +1,27 @@
 import { notFound } from "next/navigation";
-import { getAllPhotos, getPhotoByDate, getAdjacentPhotos, getPhotoSrcs } from "@/lib/photos";
+import { getAllPhotos, getPhotoByDate, getAdjacentPhotos, getPhotoSrcs, YEARS } from "@/lib/photos";
 import PhotoViewer from "@/components/PhotoViewer";
 
 export function generateStaticParams() {
-  return getAllPhotos().map((p) => ({ date: p.date }));
+  const params = [];
+  for (const year of YEARS) {
+    for (const p of getAllPhotos(year)) {
+      params.push({ date: p.date });
+    }
+  }
+  return params;
 }
 
 export async function generateMetadata({ params }) {
   const { date } = await params;
   const photo = getPhotoByDate(date);
   if (!photo) return {};
+  const year = date.slice(0, 4);
   const displayDate = new Date(date + "T12:00:00").toLocaleDateString(
     "en-US",
     { weekday: "long", year: "numeric", month: "long", day: "numeric" }
   );
-  return { title: `${displayDate} — Daily Photo 2026` };
+  return { title: `${displayDate} — Daily Photo ${year}` };
 }
 
 export default async function DayPage({ params }) {
