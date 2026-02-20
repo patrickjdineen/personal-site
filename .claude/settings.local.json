@@ -30,7 +30,9 @@
       "Bash(du:*)",
       "Bash(npx vercel:*)",
       "Bash(code:*)",
-      "Bash(open:*)"
+      "Bash(open:*)",
+      "Bash(node:*)",
+      "WebSearch"
     ]
   }
 }

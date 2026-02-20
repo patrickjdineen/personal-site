@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getAllPhotos, getPhotoSrcs } from "@/lib/photos";
 import { getAllPosts } from "@/lib/blog";
+import { getBooksByShelf } from "@/lib/books";
 
 export default function Home() {
   const photos = getAllPhotos(2026);
@@ -10,6 +11,9 @@ export default function Home() {
 
   const posts = getAllPosts();
   const latestPost = posts[0];
+
+  const readBooks = getBooksByShelf("read");
+  const latestBook = readBooks[0];
 
   return (
     <div className="mx-auto max-w-4xl px-6 py-16">
@@ -22,7 +26,7 @@ export default function Home() {
         </p>
       </section>
 
-      <div className="grid gap-8 sm:grid-cols-2">
+      <div className="grid gap-8 sm:grid-cols-3">
         <Link
           href="/photos"
           className="group block rounded-xl border border-white/10 p-6 transition-colors hover:border-white/25"
@@ -61,6 +65,24 @@ export default function Home() {
           </h2>
           <p className="mt-1 text-sm text-neutral-400">
             Thoughts and writing
+          </p>
+        </Link>
+
+        <Link
+          href="/books"
+          className="group block rounded-xl border border-white/10 p-6 transition-colors hover:border-white/25"
+        >
+          {latestBook && (
+            <div className="mb-4 rounded-lg bg-white/5 p-4">
+              <p className="text-sm font-medium">{latestBook.title}</p>
+              <p className="mt-1 text-xs text-neutral-500">{latestBook.author}</p>
+            </div>
+          )}
+          <h2 className="text-lg font-semibold group-hover:text-neutral-300 transition-colors">
+            Books
+          </h2>
+          <p className="mt-1 text-sm text-neutral-400">
+            What I've been reading
           </p>
         </Link>
       </div>
