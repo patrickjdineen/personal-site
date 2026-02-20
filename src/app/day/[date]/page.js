@@ -36,7 +36,7 @@ export default async function DayPage({ params }) {
   return (
     <div className="mx-auto max-w-4xl px-6 py-10">
       <div className="mb-6 space-y-1 text-center">
-        <h1 className="text-2xl font-bold">{displayDate}</h1>
+        <h1 className="text-lg sm:text-2xl font-bold">{displayDate}</h1>
         {photo.caption && (
           <p className="mt-3 text-neutral-300">{photo.caption}</p>
         )}

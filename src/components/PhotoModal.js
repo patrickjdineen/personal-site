@@ -53,7 +53,7 @@ export default function PhotoModal({ photo, srcs, displayDate, prev, next }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="mb-6 space-y-1 text-center">
-          <h1 className="text-2xl font-bold">{displayDate}</h1>
+          <h1 className="text-lg sm:text-2xl font-bold">{displayDate}</h1>
           {photo.caption && (
             <p className="mt-3 text-neutral-300">{photo.caption}</p>
           )}
